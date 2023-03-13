@@ -1,0 +1,155 @@
+.blind{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0 0 0 0);
+}
+
+.inner{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+.common-inner{
+    max-width: 1408px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 104px;
+}
+.section{
+    padding-top: 126px;
+}
+
+/*타이틀영역*/
+.section .title-box .title{
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+}
+.section .title-box .desc{
+    display: inline;
+    vertical-align: middle;
+    padding-right: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+    font-weight: bold;
+}
+.section .title-box .link-more{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+}
+.section .title-box .link-more::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+}
+
+/*슬라이드 네비게이션*/
+.section .swiper .btn-wrap{
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    display: flex;
+    gap: 3px;
+}
+.section .swiper .btn{ width: 33px; height: 32px; background-position: -187px -172px; }
+.section .swiper .btn.next{ transform: rotate(180deg); }
+.section .swiper .btn.swiper-button-disabled{ opacity: 0.5; }
+
+
+/*스프라이트 공통이미지*/
+.header .logo a,
+.search .group-search .search-wrap::before,
+.search .search-item .count::after,
+.swiper .btn,
+.board .link-board::after,
+.footer .btn-list::before,
+.search .filter-area .input-box::after,
+ .search .filter-area .arrow::before{
+    background: url(../image/sp_common.png) no-repeat;
+    background-size: 328px 205px;
+}
+
+
+/*pc*/
+@media (max-width:1230px) {
+    .header .logo a,
+    .header .btn-menu,
+    .header .btn-menu.close,
+    .header .menu-item .menu-link::after{
+        background: url(../image/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+    }
+}
+
+/* 테블릿 1024 ~ [768] */
+@media (max-width:1024px) {
+
+    .section{
+        padding: 126px 50px 0;
+    }
+
+    .common-inner{
+        padding: 0 50px;
+    }
+
+}
+
+/* 모바일  767 ~ [320] */
+@media (max-width:767px) {
+
+    .search .search-item .count::after,
+    .swiper .btn,
+    .board .link-board::after,
+    .footer .btn-list::before,
+    .search .group-filter .btn-filter::after,
+    .search .group-filter .btn-close{
+        background: url(../image/sp_mo.png) no-repeat;
+        background-size: 195px 181px;
+    }
+    .section{
+        padding: 68px 0 56px;
+    }
+    .common-inner{
+        padding: 0 22px;
+    }
+
+    .section .title-box .title{
+        margin-bottom: 11px;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.7px;
+    }
+
+    .section .title-box .desc{
+        padding-right: 20px;
+        margin-bottom: 9px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+    .section .title-box .link-more{
+        font-size: 12px;
+        line-height: 22px;
+        letter-spacing: -0.24px;
+    }
+
+    .section .swiper .btn{ 
+        background-position: -165px 0px;
+        width: 30px;
+        height: 30px;
+    }
+
+}
