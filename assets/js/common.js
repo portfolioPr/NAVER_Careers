@@ -30,7 +30,7 @@ $(function(){
 
         if(thisSubBox.length > 0){
             e.preventDefault();
-            thisSubBox.slideToggle();
+            $(thisSubBox).toggleClass('on');
             $('.header .menu-link.open').toggleClass('on');
         }
     })
