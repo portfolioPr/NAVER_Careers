@@ -289,7 +289,6 @@
 .people .swiper-slide .img-box{
   position: relative;
   padding-bottom: 100%;
-  background: #f00;
   padding-bottom: 47%;
   /* 화면비계산식 */
 }
@@ -391,17 +390,17 @@
   .benefits .swiper-slide .desc br{display: none;}
 }
 
-/* 테블릿 1024 ~ [768] */
+
 @media (max-width:1024px) {
 
   .visual .visual-slide .tit {
-    font-size: 60px;
+    font-size: clamp(35px,4vw,100px);
     line-height: 50px;
     letter-spacing: -0.8px;
   }
 
 }
-/* 모바일  767 ~ [320] */
+
 @media (max-width:767px) {
   /*visual*/
   .visual .visual-slide .img-box{
@@ -418,9 +417,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .visual .visual-slide .tit {
-    font-size: 40px;
   }
 
   /*people*/
@@ -454,7 +450,7 @@
     display: block;
     background-color: #ebebeb;
     border-bottom: 0;
-    text-align-last: left;
+    text-align: left;
   }
   .search .group-filter .btn-filter::after{
     content: '';
@@ -576,6 +572,9 @@
   }
   .search .filter-box.list .item-list{
     display: none;
+  }
+  .search .filter-box.list .item-list.on{
+    display: block;
   }
   .search .filter-box.list .item-list .item{
     margin-top: 14px;

@@ -71,46 +71,29 @@ $(function(){
         const Menudepth1 = $(this).siblings('.sub');
         if(Menudepth1.length > 0){
             e.preventDefault();
-            Menudepth1.slideToggle();
             $(this).toggleClass('on');
+            $(Menudepth1).toggleClass('on');
         }
     })
     $('#filterMenu .btn-sub').click(function(e){
         const Menudepth2 = $(this).siblings('.item-list');
         if(Menudepth2.length > 0){
             e.preventDefault();
-            Menudepth2.slideToggle();
             $(this).toggleClass('on');
+            $(Menudepth2).toggleClass('on');
         }
     })
 
     //체크박스 전체선택   
-    $("#chkAll").click(function() {
-		if($("#chkAll").is(":checked")) 
-        $("input[name=chk1]").prop("checked", true);
-		else $("input[name=chk1]").prop("checked", false);
-	});
-    $("#chkAll2").click(function() {
-		if($("#chkAll2").is(":checked")) 
-        $("input[name=chk2]").prop("checked", true);
-		else $("input[name=chk2]").prop("checked", false);
-	});
+    $('.checkall').click(function(){
+        let name = $(this).attr('name');
+            if( $(this).is(':checked') ) {
+                $(`input:checkbox[name=${name}]`).prop('checked',true);
+            } else {
+                $(`input:checkbox[name=${name}]`).prop('checked',false);
+            }
+    })
 
-    //체크박스 체크시 전체체크
-    $("input[name=chk1]").click(function() {
-        var total = $("input[name=chk1]").length;
-        var checked = $("input[name=chk1]:checked").length;
-        
-        if(total != checked) $("#chkAll").prop("checked", false);
-        else $("#chkAll").prop("checked", true); 
-    });
-    $("input[name=chk2]").click(function() {
-        var total = $("input[name=chk2]").length;
-        var checked = $("input[name=chk2]:checked").length;
-        
-        if(total != checked) $("#chkAll2").prop("checked", false);
-        else $("#chkAll2").prop("checked", true); 
-    });
 
     //체크박스 btn-clear 전체해제
     $('.search .group-filter .btn-clear').click(function(){
