@@ -98,6 +98,8 @@
   width: 100%;
   z-index: 2;
   transform: translateY(-50%);
+  left: 0;
+  padding: 0 104px;
 }
 
 
@@ -186,6 +188,11 @@
   text-align: center;
 }
 
+.search .group-search .btn-submit:hover{
+  background-color: #16ef72;
+  color: #000;
+}
+
 .search .group-filter{
   display: none;
 }
@@ -198,6 +205,7 @@
 }
 .search .searchlist-box .txt-wrap .common-inner{
   display: flex;
+  align-items: center;
 }
 .search .search-item:hover{
   background-color: #ebebeb;
@@ -297,10 +305,13 @@
   padding-right: 26px;
   vertical-align: top;
 }
+.people .swiper-slide .info{
+  margin-top: 16px;
+}
+
 .people .swiper-slide .info span{
   display: inline-block;
   vertical-align: top;
-  margin-top: 16px;
   font-size: 14px;
   line-height: 24px;
   letter-spacing: -0.28px;
@@ -394,9 +405,59 @@
 @media (max-width:1024px) {
 
   .visual .visual-slide .tit {
-    font-size: clamp(35px,4vw,100px);
+    font-size: clamp(35px,8vw,100px);
     line-height: 50px;
     letter-spacing: -0.8px;
+  }
+  .search .group-search{
+    padding:0 50px;
+  }
+  .search .group-searchlist{
+    padding: 80px 0 50px;
+  }
+  .search .searchlist-box{
+    margin-top: 29px;
+  }
+  .search .search-item .tit{
+    font-size: 24px;
+    line-height: 38px;
+    letter-spacing: -0.48px;
+  }
+  .search .search-item .count{
+    position: relative;
+    margin: 13px 0 0 18px;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+  }
+  .search .search-item .txt{
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: -0.32px;
+  }
+
+  .people .people-slide{
+    margin-top: 29px; 
+  }
+
+  .people .swiper, .benefits .swiper{
+    margin: 29px 0;
+  }
+
+  .people .swiper-slide .txt-box .title{
+    font-size: 18px;
+  }
+  .people .swiper-slide .info span{
+    font-size: 14px;
+  }
+  .people .swiper-slide .info{
+    margin-top: 10px;
+  }
+  .benefits .swiper-slide .txt-box .title{
+    font-size: 22px;
+  }
+  .benefits .swiper-slide .desc{
+    font-size: 16px;
+    margin-top: 10px;
   }
 
 }
@@ -604,8 +665,6 @@
     background-color: #000;
   }
 
-  .search .filter-box.check{}
-  .search .filter-box.check .check-list{}
   .search .filter-box.check .check-item{
     margin-top: 14px;
   }
@@ -688,13 +747,6 @@
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.36px;
-  }
-  .people .swiper-slide .info span{
-    margin-top: 16px;
-    font-size: 14px;
-    line-height: 24px;
-    letter-spacing: -0.28px;
-    color: #000;
   }
   .people .swiper-slide .link-view{
     display: none;

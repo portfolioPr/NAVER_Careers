@@ -98,12 +98,28 @@
 @media (max-width:1024px) {
 
     .section{
-        padding: 126px 50px 0;
+        padding: 68px 0 0 0;
     }
 
     .common-inner{
         padding: 0 50px;
     }
+
+    .section .title-box .title{
+        margin-bottom: 11px;
+        font-size: 36px;
+        line-height: 50px;
+        letter-spacing: -0.7px;
+    }
+
+    .section .title-box .desc{
+        padding-right: 20px;
+        margin-bottom: 9px;
+        font-size: 16px;
+        line-height: 26px;
+        letter-spacing: -0.32px;
+    }
+
 
 }
 
@@ -126,20 +142,6 @@
         padding: 0 22px;
     }
 
-    .section .title-box .title{
-        margin-bottom: 11px;
-        font-size: 36px;
-        line-height: 50px;
-        letter-spacing: -0.7px;
-    }
-
-    .section .title-box .desc{
-        padding-right: 20px;
-        margin-bottom: 9px;
-        font-size: 16px;
-        line-height: 26px;
-        letter-spacing: -0.32px;
-    }
     .section .title-box .link-more{
         font-size: 12px;
         line-height: 22px;
